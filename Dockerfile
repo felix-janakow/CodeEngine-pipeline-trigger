@@ -7,7 +7,7 @@ WORKDIR /app
 RUN pip install requests
 
 # Copy the source code
-COPY ce_trigger_job.py .
+COPY ce-trigger-job.py .
 
 # Define the command to run the script
 CMD ["python", "ce_trigger_job.py"]
