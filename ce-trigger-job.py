@@ -3,6 +3,7 @@ import os
 import json
 import requests
 import sys
+import logging
 
 def main():
     # CE_DATA enthält im JSON-Format bucket, key etc.
@@ -15,7 +16,9 @@ def main():
     key = data.get("key")
 
     print(f"Empfangenes Event: bucket={bucket}, key={key}")
+    logging.info(f"bucket={bucket}, key={key}")
 
+'''   
     # Watson Studio Pipeline triggern
     pipeline_id = os.environ.get("PIPELINE_ID")
     api_key = os.environ.get("IBM_CLOUD_APIKEY")
@@ -51,5 +54,6 @@ def trigger_pipeline(cpd_url, pipeline_id, token, bucket, key):
     }
     return requests.post(url, json=payload, headers=headers)
 
+'''
 if __name__ == "__main__":
     main()
