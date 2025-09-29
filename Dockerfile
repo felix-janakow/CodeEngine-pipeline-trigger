@@ -10,4 +10,4 @@ RUN pip install requests>=2.25.0 ibm-cos-sdk ibm-cloud-sdk-core
 COPY ce-trigger-job.py .
 
 # Define the command to run the script
-CMD ["python", "ce-trigger-job.py"]
+CMD ["python3", "ce-trigger-job.py"]
