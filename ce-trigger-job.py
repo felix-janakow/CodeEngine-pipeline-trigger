@@ -5,8 +5,8 @@ import requests
 import sys
 import logging
 # VALIDIERUNG IMPORTS - NACH TEST WIEDER LÖSCHEN
-import boto3
-from botocore.client import Config
+import ibm_boto3
+from ibm_botocore.client import Config
 
 # ============================================
 # VALIDIERUNG - NACH TEST WIEDER LÖSCHEN
@@ -22,7 +22,7 @@ def create_cos_client():
         print("ERROR: COS_API_KEY oder COS_SERVICE_INSTANCE_ID fehlt", file=sys.stderr)
         sys.exit(1)
     
-    cos_client = boto3.client(
+    cos_client = ibm_boto3.client(
         "s3",
         aws_access_key_id="",
         aws_secret_access_key="",
