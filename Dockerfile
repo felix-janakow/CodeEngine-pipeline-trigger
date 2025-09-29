@@ -4,7 +4,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Install the dependencies directly
-RUN pip install requests>=2.25.0 boto3>=1.26.0
+RUN pip install requests>=2.25.0 ibm-cos-sdk ibm-cloud-sdk-core
 
 # Copy the source code
 COPY ce-trigger-job.py .
